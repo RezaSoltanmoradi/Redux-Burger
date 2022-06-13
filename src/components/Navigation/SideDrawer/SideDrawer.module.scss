@@ -1,0 +1,51 @@
+.SideDrawer {
+    position: fixed;
+    width: 280px;
+    max-width: 70%;
+    height: 92%;
+    left: 0px;
+    top: 8%;
+    z-index: 200;
+    background-color: white;
+    border-radius: 5px;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+    & .buttonContainer {
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+        align-items: center;
+    }
+    & .closeButton {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        border: 1px solid red;
+        border-radius: 50%;
+        padding: 5px;
+        margin: 0;
+        color: orangered;
+        font-weight: bold;
+        transition: all 0.2s linear;
+        &:hover {
+            background-color: rgb(200, 50, 50);
+            color: white;
+        }
+    }
+}
+.open {
+    transform: translateX(0);
+}
+.close {
+    transform: translateX(-100%);
+}
+@media (min-width: 576px) {
+    .SideDrawer {
+        display: none;
+    }
+}
+.Logo {
+    height: 11%;
+    margin-bottom: 32px;
+}
